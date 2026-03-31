@@ -1,0 +1,24 @@
+name: 'dbt_ecommerce'
+version: '1.0.0'
+config-version: 2
+
+profile: 'dbt_ecommerce' # Phải khớp với tên trong profiles.yml
+
+model-paths: ["models"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Cấu hình mặc định cho các bảng tạo ra
+models:
+  dbt_ecommerce:
+    staging:
+      +materialized: view  # Lớp nháp chỉ tạo View cho nhẹ
+    marts:
+      core:
+        +materialized: table # Lớp Gold tạo Table vật lý để truy vấn cho nhanh

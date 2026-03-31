@@ -1,0 +1,13 @@
+dbt_ecommerce:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DWH_HOST', 'localhost') }}"
+      user: admin
+      password: admin
+      port: "{{ env_var('DWH_PORT', '5436') | int }}"
+      dbname: ecommerce_dwh
+      schema: gold_layer
+      threads: 4
+      keepalives_idle: 0

@@ -1,0 +1,61 @@
+# ==========================================
+# 1. BỎ QUA MÔI TRƯỜNG PYTHON & HỆ ĐIỀU HÀNH
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ==========================================
+# 2. BỎ QUA THÔNG TIN NHẠY CẢM (QUAN TRỌNG)
+# ==========================================
+.env
+*.pem
+*.key
+credentials.json
+
+# ==========================================
+# 3. BỎ QUA CÁC THƯ MỤC RÁC/LOG/DATA NẶNG
+# ==========================================
+data/
+logs/
+tmp/
+.ivy2/
+spark-warehouse/
+metastore_db/
+archive_sessions/
+s3a?/
+
+# ==========================================
+# 4. BỎ QUA CÁC FILE SINH RA TỪ CÔNG CỤ
+# ==========================================
+# DBT
+dbt_ecommerce/target/
+dbt_ecommerce/dbt_packages/
+dbt_ecommerce/logs/
+ecommerce_dbt/logs/
+
+# Airflow
+airflow/logs/
+airflow/airflow.cfg
+airflow/airflow.db
+airflow/webserver_config.py
+
+# Streamlit/SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Terraform (Nếu sau này sếp dùng)
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# File output tạm thời nãy sếp vừa tạo
+cautruc.txt

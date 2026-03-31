@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: public
+    description: "Schema mặc định của PostgreSQL chứa dữ liệu thô (Raw Data)"
+    tables:
+      - name: raw_ecommerce_reviews
+        description: "Bảng dữ liệu đánh giá sản phẩm đẩy từ Spark (Silver Layer) sang"
