@@ -196,5 +196,3 @@ docker compose -f infrastructure/docker/docker-compose.yml --env-file .env up -d
 
 xem airflow platform: http://localhost:8085/
 ![airflow](image/airflow.jpg)
-
-silver_to_dwh lộ admin
