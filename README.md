@@ -10,7 +10,7 @@ Dự án này xây dựng một hệ thống **Data Lakehouse End-to-End** áp d
 
 ## KIẾN TRÚC HỆ THỐNG (SYSTEM ARCHITECTURE)
 
-![Sơ đồ Kiến trúc Lambda](image/anh_1.jpg)
+![Kiến trúc hệ thống](image/system_architecture.png)
 *(Mô tả: Sơ đồ luồng dữ liệu từ Nguồn phát -> Kafka -> Spark (Bronze/Silver) -> PostgreSQL (Gold) -> Streamlit)*
 
 Hệ thống tuân thủ mô hình **Medallion Architecture**:
@@ -102,9 +102,9 @@ bài toán đã xử lí:
 
     - để giải quyết vấn đề data lineage, chúng ta cần 1 dashboard như: trạm kiểm toán dữ liệu (data reconciliation audit): để theo dõi xem không có 1 dòng dữ liệu nào bị rơi ra ngoài,end-to-end record tracker: tra cứu hành trình của 1 dòng dữ liệu cụ thể
 
-        + data reconciliation audit: Số data sinh ra ➡️ Số data tới Kafka ➡️ Số data qua Bronze (trừ DLQ) ➡️ Số data vào Silver ➡️ Số data lưu xuống Postgres. Nếu tổng sionh ra = (tổng silver +tỗng dlq) ➡️ hệ thống xanh lá (khớp sổ) ➡️ nếu hụt mất vài dòng ➡️ hệ thống báo đỏ ( cảnh báo mất data do sập kafka hoặc spark rớt batch)
+        - data reconciliation audit: Số data sinh ra ➡️ Số data tới Kafka ➡️ Số data qua Bronze (trừ DLQ) ➡️ Số data vào Silver ➡️ Số data lưu xuống Postgres. Nếu tổng sionh ra = (tổng silver +tỗng dlq) ➡️ hệ thống xanh lá (khớp sổ) ➡️ nếu hụt mất vài dòng ➡️ hệ thống báo đỏ ( cảnh báo mất data do sập kafka hoặc spark rớt batch)
 
-        + end-to-end record tracker: nhập 1 mã reviewerID hoặc Asin cụ thể , dashboard sẽ vẽ ra một cái TimeLine ( dòng thời gian): 
+        - end-to-end record tracker: nhập 1 mã reviewerID hoặc Asin cụ thể , dashboard sẽ vẽ ra một cái TimeLine ( dòng thời gian): 
                 
                 🕒 10:00:00 - Nhận tại Kafka.
 
