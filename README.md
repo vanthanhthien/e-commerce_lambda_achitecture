@@ -93,7 +93,6 @@ Hoạt động ra sao? Bạn nhập một cái ID (reviewerID hoặc asin). Hệ
 
 
 Báo cáo doanh thu và KPI tổng quát cho Ban giám đốc, truy vấn trực tiếp từ PostgreSQL bằng engine **Polars** cực nhẹ và nhanh.
-![Executive BI](image/Excutive_BI.jpg)
 
 ### bài toán đã xử lí:
     
