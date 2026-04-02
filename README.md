@@ -163,7 +163,7 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 
-cách chạy thủ công
+## cách chạy thủ công
 
 cd infrastructure\docker
 docker compose --env-file ../../.env up -d
@@ -187,7 +187,7 @@ python src/batch/silver_to_dwh.py
 cd dbt_ecommerce
 dbt run --profiles-dir .
 
-cách chạy khi có .bat:
+## Tự động chạy khi có .bat:
 
 docker compose -f infrastructure/docker/docker-compose.yml --env-file .env up -d
 
