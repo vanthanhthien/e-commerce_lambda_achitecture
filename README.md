@@ -83,7 +83,7 @@ Kiểm toán chống thất thoát dữ liệu (Funnel) và kính hiển vi truy
 ![Success Record Tracker](image/success_record_tracker_1.jpg)
 ![error record Tracker](image/success_record_tracker_2.jpg)
 
-![Data Reconciliation](image/Data_Reconciliation.jpg)
+![Data Reconciliation](image/Data_reconciliation.jpg)
 
 
 ### 5. Executive BI (Platinum Layer)
